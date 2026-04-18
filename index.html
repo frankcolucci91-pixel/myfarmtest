@@ -8,7 +8,7 @@
     <body>
         <h1> FEATHERED FRIENDS FARM</h1>
         <p>Welcome to our Chicken Management System! This platform is designed to help you efficiently manage your poultry farm. Whether you're tracking feed schedules, monitoring egg production, or keeping an eye on the health of your chickens, our system has got you covered. With user-friendly features and real-time updates, you can ensure the well-being of your feathered friends and optimize your farm's productivity. Let's get started on creating a thriving environment for your chickens!</p>
-        <input type ="text" placeholder="Enter today's headcount">
+        <input type ="number" placeholder="Enter today's headcount">
         <button>Update Headcount</button>
         <h2>Today's Headcount: <span id="headcount">0</span></h2>
         <script>
@@ -30,7 +30,7 @@
         </ul>
         <h2>Egg Production</h2>
         <p>Today's Egg Count: <span id="eggCount">0</span></p>
-        <input type="text" placeholder="Enter today's egg count">
+        <input type="number" placeholder="Enter today's egg count">
         <button id="updateEggCount">Update Egg Count</button>
         <script>
             const eggCountInput = document.querySelector('input[placeholder="Enter today\'s egg count"]');
@@ -47,7 +47,7 @@
         <p>Keep an eye on your chickens' health by regularly checking for signs of illness, such as lethargy, loss of appetite, or unusual behavior. Ensure they have access to clean water and a balanced diet to maintain their well-being.</p>
         <h2>Expenses</h2>
         <p>Track your farm expenses to manage your budget effectively. This includes costs for feed, veterinary care, and equipment maintenance.</p>
-        <input type="text" placeholder="Enter today's expenses">
+        <input type="number" placeholder="Enter today's expenses">
         <button id="updateExpenses">Update Expenses</button>
         <p>Today's Expenses: <span id="expenses">0</span></p>
         <script>
