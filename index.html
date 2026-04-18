@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CHICKEN MANAGEMENT SYSTEM</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1> FEATHERED FRIENDS FARM</h1>
+        <p>Welcome to our Chicken Management System! This platform is designed to help you efficiently manage your poultry farm. Whether you're tracking feed schedules, monitoring egg production, or keeping an eye on the health of your chickens, our system has got you covered. With user-friendly features and real-time updates, you can ensure the well-being of your feathered friends and optimize your farm's productivity. Let's get started on creating a thriving environment for your chickens!</p>
+        <input type ="text" placeholder="Enter today's headcount">
+        <button>Update Headcount</button>
+        <h2>Today's Headcount: <span id="headcount">0</span></h2>
+        <script>
+            const headcountInput = document.querySelector('input');
+            const headcountDisplay = document.getElementById('headcount');
+            const updateButton = document.querySelector('button');
+
+            updateButton.addEventListener('click', () => {
+                const headcount = headcountInput.value;
+                headcountDisplay.textContent = headcount;
+                headcountInput.value = '';
+            });
+        </script>
+        <h2>Feed Schedule</h2>
+        <ul>
+            <li>Morning: 8:00 AM - Corn and grains</li>
+            <li>Afternoon: 12:00 PM - Fresh vegetables</li>
+            <li>Evening: 6:00 PM - Protein-rich feed</li>
+        </ul>
+        <h2>Egg Production</h2>
+        <p>Today's Egg Count: <span id="eggCount">0</span></p>
+        <input type="text" placeholder="Enter today's egg count">
+        <button id="updateEggCount">Update Egg Count</button>
+        <script>
+            const eggCountInput = document.querySelector('input[placeholder="Enter today\'s egg count"]');
+            const eggCountDisplay = document.getElementById('eggCount');
+            const updateEggButton = document.getElementById('updateEggCount');
+
+            updateEggButton.addEventListener('click', () => {
+                const eggCount = eggCountInput.value;
+                eggCountDisplay.textContent = eggCount;
+                eggCountInput.value = '';
+            });
+        </script>
+        <h2>Health Monitoring</h2>
+        <p>Keep an eye on your chickens' health by regularly checking for signs of illness, such as lethargy, loss of appetite, or unusual behavior. Ensure they have access to clean water and a balanced diet to maintain their well-being.</p>
+        <h2>Expenses</h2>
+        <p>Track your farm expenses to manage your budget effectively. This includes costs for feed, veterinary care, and equipment maintenance.</p>
+        <input type="text" placeholder="Enter today's expenses">
+        <button id="updateExpenses">Update Expenses</button>
+        <p>Today's Expenses: <span id="expenses">0</span></p>
+        <script>
+            const expensesInput = document.querySelector('input[placeholder="Enter today\'s expenses"]');
+            const expensesDisplay = document.getElementById('expenses');
+            const updateExpensesButton = document.getElementById('updateExpenses');
+
+            updateExpensesButton.addEventListener('click', () => {
+                const expenses = expensesInput.value;
+                expensesDisplay.textContent = expenses;
+                expensesInput.value = '';
+            });
+            </script>
+
+    </body>
+    </html>
